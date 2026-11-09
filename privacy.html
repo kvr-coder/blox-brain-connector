@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="How Blox Brain YouTube Connector accesses, uses, stores, and shares authorized YouTube data.">
+  <title>Privacy Policy | Blox Brain YouTube Connector</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header wrap">
+    <a class="wordmark" href="./"><span class="mark" aria-hidden="true"></span>Blox Brain</a>
+    <nav aria-label="Main navigation"><a href="privacy.html" aria-current="page">Privacy policy</a></nav>
+  </header>
+
+  <main id="main" class="wrap policy">
+    <header class="policy-heading">
+      <p class="eyebrow">Blox Brain YouTube Connector</p>
+      <h1>Privacy policy</h1>
+      <p class="intro">How the connector handles YouTube reports in Codex today and how planned management features would use channel data.</p>
+    </header>
+
+    <section aria-labelledby="access">
+      <h2 id="access">Data accessed and why</h2>
+      <p>Blox Brain YouTube Connector uses YouTube API Services. The channel owner authorizes read-only YouTube access through Google. The connector reads channel details to confirm the authorized channel, then reads its uploads playlist. The report includes the channel name and ID, upload count, and the titles and IDs of the requested uploads.</p>
+      <p>Google handles sign-in and consent under the <a href="https://www.google.com/policies/privacy">Google Privacy Policy</a>.</p>
+    </section>
+
+    <section aria-labelledby="storage">
+      <h2 id="storage">Local storage and retention</h2>
+      <p>The connector stores its Google authorization, including a refresh token, in a local file encrypted by Windows for the current Windows user. It uses that authorization to make requests to Google. The local file remains on the device until it is removed. The connector reads channel and upload details on demand and returns them directly to Codex, without keeping a separate inventory on disk.</p>
+    </section>
+
+    <section aria-labelledby="sharing">
+      <h2 id="sharing">Processing in Codex</h2>
+      <p>When the owner requests a report, the connector passes the channel and upload details to OpenAI’s Codex so it can answer the request. Codex may retain those results in the conversation according to the applicable OpenAI policies and workspace settings. The <a href="https://openai.com/policies/privacy-policy/">OpenAI Privacy Policy</a> and <a href="https://help.openai.com/en/articles/7730893-data-controls-in-chatgpt">data controls</a> describe how to manage that data.</p>
+      <p>The connector uses Google data to provide the requested channel report. The <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including its Limited Use requirements, sets limits on how information received from Google APIs may be used and shared.</p>
+    </section>
+
+    <section aria-labelledby="planned">
+      <h2 id="planned">Planned management features</h2>
+      <p>With separate approval from the owner, the planned tools would handle channel profile details, video titles and descriptions, playlist details, visibility settings, and scheduled publication times. The connector would send the owner’s requested changes to YouTube for the selected channel.</p>
+      <p>For private uploads, the planned connector would read the video file the owner selects and send it from the local device to YouTube. Codex would process the requested settings and receive the upload or publishing result, such as the video ID and status. The planned design keeps Google authorization on the device using encrypted local storage.</p>
+    </section>
+
+    <section aria-labelledby="revoke">
+      <h2 id="revoke">Revoke access and remove saved data</h2>
+      <p>Remove the connector in your <a href="https://security.google.com/settings/security/permissions">Google Account connections</a> to revoke its access. To remove the saved authorization from your device, delete the local encrypted authorization file. Manage or delete any conversation containing results separately in Codex.</p>
+    </section>
+
+    <section aria-labelledby="website">
+      <h2 id="website">Website and contact</h2>
+      <p>This information site is hosted by GitHub Pages. GitHub logs visitor IP addresses for security as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub Privacy Statement</a>.</p>
+      <p>For privacy questions, contact the maintainer through <a href="https://github.com/kvr-coder/blox-brain-connector/issues">the public issue tracker</a>. Keep account details, authorization files, and private channel information out of public posts.</p>
+    </section>
+
+    <a class="back-link" href="./"><span aria-hidden="true">←</span> Back to the homepage</a>
+  </main>
+
+  <footer class="site-footer wrap">
+    <p>Blox Brain YouTube Connector</p>
+    <nav aria-label="Site information">
+      <a href="./">Home</a>
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>
+    </nav>
+  </footer>
+</body>
+</html>
